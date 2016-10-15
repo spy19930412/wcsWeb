@@ -1,0 +1,51 @@
+.label {
+  vertical-align:text-middle;
+}
+
+.top {
+  padding-top: 10px;
+}
+
+.top1 {
+  padding-top: 20px;
+}
+
+.bottom {
+  padding-bottom:20px;
+}
+
+.left {
+  padding-left: 500px;
+}
+
+.input {
+  vertical-align:text-middle;
+}
+
+.left2 {
+  padding-left: 200px;
+}
+
+.left3 {
+  padding-left: 400px;
+}
+
+.left4 {
+  padding-left: 600px;
+}
+
+.yellow-background {
+  background-color:#FFF8DC;
+}
+
+#middle {
+  padding-left: 300px;
+}
+
+#height {
+  padding-bottom:10px;
+}
+
+#button{
+  padding-left: 35%;
+}
