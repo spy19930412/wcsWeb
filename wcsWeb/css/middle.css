@@ -49,3 +49,65 @@
 #button{
   padding-left: 35%;
 }
+
+.helpingCenterHref{
+  margin-left: 10px;
+}
+.wel-1 {
+    background: #FB623A;
+}
+
+.wel-2 {
+    background: #FDBD10;
+}
+
+
+.wel-3 {
+    background: #03C0CA;
+}
+
+
+.wel-4 {
+    background: #00a388;
+}
+
+
+i.wel-num {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.welcome-w3agile span.wel-icon1 {
+    background: url(../images/ic1.png)no-repeat center;
+}
+
+.welcome-w3agile span.wel-icon2 {
+    background: url(../images/ic2.png)no-repeat center;
+}
+
+.welcome-w3agile span.wel-icon3 {
+    background: url(../images/ic3.png)no-repeat center;
+}
+
+.welcome-w3agile span.wel-icon4 {
+    background: url(../images/ic4.png)no-repeat center;
+}
+
+.welcome-w3agile h3 {
+    font-size: 1.7em;
+    color: #fff;
+    margin: 12px 0px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.welcome-w3agile p {
+    font-size: 0.91em;
+    color: #fff;
+    line-height: 1.8em;
+}
+
+.welcome-w3agile {
+    text-align: center;
+    padding: 2em 2em;
+}

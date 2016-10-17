@@ -37,6 +37,7 @@
     <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
     <link href='css/uploadify.css' rel='stylesheet'>
     <link href='css/animate.min.css' rel='stylesheet'>
+    <link href='css/middle.css' rel='stylesheet'>
 
     <!-- jQuery -->
     <script src="bower_components/jquery/jquery.min.js"></script>
@@ -156,6 +157,12 @@
                         主页
                     </a>
                 </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-th"></i>
+                        新建仿真工程
+                    </a>
+                </li>
             </ul>
 
         </div>
@@ -173,21 +180,28 @@
                             <li class="nav-header">菜单</li>
                             <li>
                                 <a class="ajax-link" href="index.html">
-                                    <i class="glyphicon glyphicon-home"></i>
-                                    <span>仿真算法历史</span>
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    <span>个人信息</span>
                                 </a>
                             </li>
                             <li>
                                 <a class="ajax-link" href="ui.html">
-                                    <i class="glyphicon glyphicon-eye-open"></i>
-                                    <span>仿真参数配置历史</span>
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    <span>仿真历史</span>
                                 </a>
                             </li>
                             <li>
                                 <a class="ajax-link" href="form.html">
                                     <i
                                     class="glyphicon glyphicon-edit"></i>
-                                    <span>仿真结果历史</span>
+                                    <span>模板管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="form.html">
+                                    <i
+                                    class="glyphicon glyphicon-question-sign"></i>
+                                    <span>帮助中心</span>
                                 </a>
                             </li>
                         </ul>
@@ -214,24 +228,88 @@
                 <div>
                     <ul class="breadcrumb">
                         <li>
-                            <a href="#">仿真历史</a>
+                            <a href="#">个人中心</a>
                         </li>
                         <li>
-                            <a href="#">仿真详情</a>
+                            <a href="#">帮助中心</a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- 仿真详情部分 -->
+                <!-- 保留 -->
                 <div class="row">
                     <div class="box col-md-12">
-                        <div class="box-inner">                        
-                            <div class="box-content">
-
-
-
-
+                        <div class="col-md-5 login-box">
+                            <div class="alert alert-info">
+                                <p>问题搜索</p>
                             </div>
+                            <form class="form-horizontal" action="index.html" method="post">
+                                <fieldset>
+                                    <input type="text" class="form-control" id="problem" placeholder="请输入您想搜索的问题">
+
+                                    <p class="pull-right">
+                                        <button class="btn btn-primary" type="submit">提问</button>
+                                    </p>
+                                </fieldset>
+
+                                <div class="welcome-bottom">
+                                    <div class="col-md-3 welcome-w3agile wel-1">
+                                        <i class="wel-num"><img src="images/1.png" alt=""></i>
+                                        <span class="wel-icon1"></span>
+                                        <h3>Thought</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet adipiscing.Exercitationem  corporis suscipit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3 welcome-w3agile wel-2">
+                                        <i class="wel-num"><img src="images/2.png" alt=""></i>
+                                        <span class="wel-icon2"></span>
+                                        <h3>Planning</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet adipiscing.Exercitationem  corporis suscipit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3 welcome-w3agile wel-3">
+                                        <i class="wel-num">
+                                            <img src="images/3.png" alt=""></i>
+                                        <span class="wel-icon3"></span>
+                                        <h3>Implement</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet adipiscing.Exercitationem  corporis suscipit.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3 welcome-w3agile wel-4">
+                                        <i class="wel-num">
+                                            <img src="images/4.png" alt=""></i>
+                                        <span class="wel-icon4"></span>
+                                        <h3>Result</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet adipiscing.Exercitationem  corporis suscipit.
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <fieldset>
+                                    <div class="alert alert-info">
+                                        <p>热点问题</p>
+                                    </div>
+
+                                    <p>
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <a href="#" class="helpingCenterHref">系统如何使用用户自定义模板</a>
+                                    </p>
+                                    <p>
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <a href="#" class="helpingCenterHref">系统如何使用用户自己设计的拓扑图</a>
+                                    </p>
+                                    <p>
+                                        <i class="glyphicon glyphicon-chevron-right"></i>
+                                        <a href="#" class="helpingCenterHref">系统如何使用用户自定义参数配置</a>
+                                    </p>
+
+                                </fieldset>
+                            </form>
                         </div>
                     </div>
                     <!--/span--> </div>
@@ -268,10 +346,8 @@
         <footer class="row">
             <p class="col-md-9 col-sm-9 col-xs-12 copyright">
                 &copy;
-                <a href="http://usman.it" target="_blank">
-                 WebCloudSim2
-                </a>
-                
+                <a href="http://usman.it" target="_blank">WebCloudSim2</a>
+
             </p>
 
             <p class="col-md-3 col-sm-3 col-xs-12 powered-by">
