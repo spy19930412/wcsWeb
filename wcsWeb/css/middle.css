@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .label {
   vertical-align:text-middle;
 }
@@ -111,3 +112,145 @@ i.wel-num {
     text-align: center;
     padding: 2em 2em;
 }
+=======
+.label {
+  vertical-align:text-middle;
+}
+
+.top {
+  padding-top: 10px;
+}
+
+.top1 {
+  padding-top: 20px;
+}
+
+.bottom {
+  padding-bottom:20px;
+}
+
+.left {
+  padding-left: 500px;
+}
+
+.input {
+  vertical-align:text-middle;
+}
+
+.left2 {
+  padding-left: 200px;
+}
+
+.left3 {
+  padding-left: 400px;
+}
+
+.left4 {
+  padding-left: 600px;
+}
+
+.yellow-background {
+  background-color:#FFF8DC;
+}
+
+.middle_div {
+  padding-left: 300px;
+}
+
+#height {
+  padding-bottom:10px;
+}
+
+#button{
+  padding-left: 35%;
+}
+
+.helpingCenterHref{
+  margin-left: 10px;
+}
+
+.focus-grid {
+    margin-top: 30px;
+}
+.w3layouts-boder1 {
+  border:1px solid #dd0908;
+}
+.w3layouts-boder2 {
+  border:1px solid #ff9e29;
+}
+.w3layouts-boder3 {
+  border:1px solid #3fb7d2;
+}
+.w3layouts-boder4 {
+  border:1px solid #15c01c;
+}
+
+.focus-grid {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+.focus-grid a {
+    text-decoration: none;
+}
+.btn-8, .btn-8:before, .btn-8:after {
+    box-sizing: border-box;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    -ms-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+}
+.focus-border {
+    border: 1px solid transparent;
+}
+.focus-layout {
+    margin: 5px;
+    padding: 20px 0;
+    transition: 0.5s all;
+    -webkit-transition: 1.5s all;
+    -moz-transition: 1.5s all;
+    -o-transition: 1.5s all;
+    -ms-transition: 1.5s all;
+    text-align: center;
+}
+.focus-image {
+    text-align: center;
+    transition: 0.5s all;
+    -webkit-transition: 1.5s all;
+    -moz-transition: 1.5s all;
+    -o-transition: 1.5s all;
+    -ms-transition: 1.5s all;
+}
+.focus-image i {
+    font-size: 40px;
+    color: #fff;
+    background: #f49ecf;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    line-height: 95px;
+    transition: 0.5s all;
+    -webkit-transition: 1.5s all;
+    -moz-transition: 1.5s all;
+    -o-transition: 1.5s all;
+    -ms-transition: 1.5s all;
+}
+.focus-layout h4 {
+    margin: 0 0 0 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    height: 35px;
+    margin-top: 20px;
+}
+.btn-8, .btn-8:before, .btn-8:after {
+    box-sizing: border-box;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    -ms-transition: 1.5s;
+    -moz-transition: 1.5s;
+    -o-transition: 1.5s;
+}
+>>>>>>> 新增了帮助中心
