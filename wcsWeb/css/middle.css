@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .label {
   vertical-align:text-middle;
 }
@@ -7,15 +6,19 @@
   padding-top: 10px;
 }
 
-.top1 {
+.top_up {
   padding-top: 20px;
+}
+
+.top_content {
+  padding-top: 100px;
 }
 
 .bottom {
   padding-bottom:20px;
 }
 
-.left {
+.left_query {
   padding-left: 500px;
 }
 
@@ -23,16 +26,24 @@
   vertical-align:text-middle;
 }
 
-.left2 {
+.left_create {
   padding-left: 200px;
 }
 
-.left3 {
+.left_delete {
   padding-left: 400px;
 }
 
-.left4 {
+.left_check {
   padding-left: 600px;
+}
+
+.left_tp {
+  padding-left: 700px;
+}
+
+.left_import {
+  padding-left: 900px;
 }
 
 .yellow-background {
@@ -43,214 +54,14 @@
   padding-left: 300px;
 }
 
-#height {
+.height_title {
   padding-bottom:10px;
 }
 
-#button{
+.button_p{
   padding-left: 35%;
 }
 
-.helpingCenterHref{
-  margin-left: 10px;
+.larger-image {
+  width: 500px;
 }
-.wel-1 {
-    background: #FB623A;
-}
-
-.wel-2 {
-    background: #FDBD10;
-}
-
-
-.wel-3 {
-    background: #03C0CA;
-}
-
-
-.wel-4 {
-    background: #00a388;
-}
-
-
-i.wel-num {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.welcome-w3agile span.wel-icon1 {
-    background: url(../images/ic1.png)no-repeat center;
-}
-
-.welcome-w3agile span.wel-icon2 {
-    background: url(../images/ic2.png)no-repeat center;
-}
-
-.welcome-w3agile span.wel-icon3 {
-    background: url(../images/ic3.png)no-repeat center;
-}
-
-.welcome-w3agile span.wel-icon4 {
-    background: url(../images/ic4.png)no-repeat center;
-}
-
-.welcome-w3agile h3 {
-    font-size: 1.7em;
-    color: #fff;
-    margin: 12px 0px;
-    font-family: 'Ubuntu Condensed', sans-serif;
-}
-
-.welcome-w3agile p {
-    font-size: 0.91em;
-    color: #fff;
-    line-height: 1.8em;
-}
-
-.welcome-w3agile {
-    text-align: center;
-    padding: 2em 2em;
-}
-=======
-.label {
-  vertical-align:text-middle;
-}
-
-.top {
-  padding-top: 10px;
-}
-
-.top1 {
-  padding-top: 20px;
-}
-
-.bottom {
-  padding-bottom:20px;
-}
-
-.left {
-  padding-left: 500px;
-}
-
-.input {
-  vertical-align:text-middle;
-}
-
-.left2 {
-  padding-left: 200px;
-}
-
-.left3 {
-  padding-left: 400px;
-}
-
-.left4 {
-  padding-left: 600px;
-}
-
-.yellow-background {
-  background-color:#FFF8DC;
-}
-
-.middle_div {
-  padding-left: 300px;
-}
-
-#height {
-  padding-bottom:10px;
-}
-
-#button{
-  padding-left: 35%;
-}
-
-.helpingCenterHref{
-  margin-left: 10px;
-}
-
-.focus-grid {
-    margin-top: 30px;
-}
-.w3layouts-boder1 {
-  border:1px solid #dd0908;
-}
-.w3layouts-boder2 {
-  border:1px solid #ff9e29;
-}
-.w3layouts-boder3 {
-  border:1px solid #3fb7d2;
-}
-.w3layouts-boder4 {
-  border:1px solid #15c01c;
-}
-
-.focus-grid {
-    position: relative;
-    display: block;
-    text-transform: uppercase;
-    overflow: hidden;
-}
-.focus-grid a {
-    text-decoration: none;
-}
-.btn-8, .btn-8:before, .btn-8:after {
-    box-sizing: border-box;
-    -webkit-transition: 1.5s;
-    transition: 1.5s;
-    -ms-transition: 1.5s;
-    -moz-transition: 1.5s;
-    -o-transition: 1.5s;
-}
-.focus-border {
-    border: 1px solid transparent;
-}
-.focus-layout {
-    margin: 5px;
-    padding: 20px 0;
-    transition: 0.5s all;
-    -webkit-transition: 1.5s all;
-    -moz-transition: 1.5s all;
-    -o-transition: 1.5s all;
-    -ms-transition: 1.5s all;
-    text-align: center;
-}
-.focus-image {
-    text-align: center;
-    transition: 0.5s all;
-    -webkit-transition: 1.5s all;
-    -moz-transition: 1.5s all;
-    -o-transition: 1.5s all;
-    -ms-transition: 1.5s all;
-}
-.focus-image i {
-    font-size: 40px;
-    color: #fff;
-    background: #f49ecf;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    line-height: 95px;
-    transition: 0.5s all;
-    -webkit-transition: 1.5s all;
-    -moz-transition: 1.5s all;
-    -o-transition: 1.5s all;
-    -ms-transition: 1.5s all;
-}
-.focus-layout h4 {
-    margin: 0 0 0 0;
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    height: 35px;
-    margin-top: 20px;
-}
-.btn-8, .btn-8:before, .btn-8:after {
-    box-sizing: border-box;
-    -webkit-transition: 1.5s;
-    transition: 1.5s;
-    -ms-transition: 1.5s;
-    -moz-transition: 1.5s;
-    -o-transition: 1.5s;
-}
->>>>>>> 新增了帮助中心
