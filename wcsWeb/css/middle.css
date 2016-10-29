@@ -39,7 +39,7 @@
 }
 
 .left_tp {
-  padding-left: 700px;
+  padding-left: 510px;
 }
 
 .left_import {
@@ -64,4 +64,8 @@
 
 .larger-image {
   width: 500px;
+}
+
+.topologyDiv{
+  margin-bottom: 20px;
 }
