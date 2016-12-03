@@ -153,53 +153,39 @@
                 <li>
                     <a href="#">
                         <i class="glyphicon glyphicon-globe"></i>
-                        用户账户管理
+                        主页
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="glyphicon glyphicon-th"></i>
-                        用户权限管理
+                        新建仿真工程
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <i class="glyphicon glyphicon-edit"></i>
-                        系统模板管理
+                        绘制拓扑
                     </a>
-                </li>
-                <!-- <li class="dropdown">
-                    <a href="#" data-toggle="dropdown">
-                        <i class="glyphicon glyphicon-star"></i>
-                        Dropdown
-                        <span
-                            class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">Action</a>
-                        </li>
-                        <li>
-                            <a href="#">Another action</a>
-                        </li>
-                        <li>
-                            <a href="#">Something else here</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">Separated link</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">One more separated link</a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
-                    <form class="navbar-search pull-left">
-                        <input placeholder="Search" class="search-query form-control col-md-10" name="query"
-                               type="text"></form>
-                </li> -->
+                    <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i>
+                        仿真场景配置
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i>
+                        算法配置
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i>
+                        结果展示
+                    </a>
+                </li>
             </ul>
 
         </div>
@@ -216,18 +202,13 @@
                         <ul class="nav nav-pills nav-stacked main-menu">
                             <li class="nav-header">菜单</li>
                             <li class="accordion active">
-                                <a href="#"><i class="glyphicon glyphicon-plus"></i><span>用户账户管理</span></a>
-                                  <ul class="nav nav-pills nav-stacked" style="display: block;">
-                                      <li><a href="#">查询用户</a></li>
-                                      <li><a href="#">创建用户</a></li>
-                                      <li><a href="#">修改用户</a></li>
-                                  </ul>
+                                <a href="#"><i class="glyphicon glyphicon-plus"></i><span>Excel表格输出</span></a>
                             </li>
                             <li class="accordion active">
-                                <a href="#"><i class="glyphicon glyphicon-plus"></i><span>用户权限管理</span></a>
-                                  <ul class="nav nav-pills nav-stacked" style="display: block;">
-                                      <li><a href="#">权限审核</a></li>
-                                  </ul>
+                                <a href="#"><i class="glyphicon glyphicon-plus"></i><span>仿真log日志记录</span></a>
+                            </li>
+                            <li class="accordion active">
+                                <a href="#"><i class="glyphicon glyphicon-plus"></i><span>图形化演示</span></a>
                             </li>
                         </ul>
                     </div>
@@ -253,10 +234,7 @@
                 <div>
                     <ul class="breadcrumb">
                         <li>
-                            <a href="#">用户权限管理</a>
-                        </li>
-                        <li>
-                            <a href="#">权限审核</a>
+                            <a href="#">Excel表格输出</a>
                         </li>
                     </ul>
                 </div>
@@ -266,103 +244,10 @@
                     <div class="box col-md-12">
                         <div class="box-inner">
                             <div class="box-content">
-                              <table class="table table-striped">
-	                              <caption id="height">待权限审核用户列表</caption>
-	                                   <thead>
-		                                     <tr>
-                                              <th></th>
-			                                        <th>序号</th>
-			                                        <th>用户ID</th>
-			                                        <th>用户名</th>
-			                                        <th>用户状态</th>
-		                                    </tr>
-	                                  </thead>
-	                            <tbody>
-		                                    <tr>
-                                             <td>
-                                                <input type="checkbox" />
-                                             </td>
-			                                       <td>1</td>
-			                                       <td>2016060001</td>
-			                                       <td>yali</td>
-			                                       <td>待审核</td>
-		                                    </tr>
-		                                    <tr>
-                                            <td>
-                                                <input type="checkbox" />
-                                            </td>
-			                                       <td>2</td>
-			                                       <td>2016050012</td>
-			                                       <td>wangqi</td>
-			                                       <td>待审核</td>
-		                                    </tr>
-	                           </tbody>
-                           </table>
+
                            <hr>
-                           <div>
-                           <form class="form-horizontal" action="index.html" method="post">
-                            <fieldset>
-                              <div class="form-group main">
-                                <label for="userID" class="col-sm-6 control-label">用户ID</label>
-                                <div class="col-sm-6">
-                                  <input type="text" class="form-control" id="userID">
-                                </div>
-                              </div>
+                           <div style="height:400px">
 
-                              <br>
-
-                              <div class="form-group main">
-                                  <label for="username" class="col-sm-6 control-label">用户名</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="username">
-                                  </div>
-                              </div>
-
-                              <br>
-
-                              <div class="form-group main">
-                                  <label for="realname" class="col-sm-6 control-label">真实姓名</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="reakname">
-                                  </div>
-                              </div>
-
-                              <br>
-
-                              <div class="form-group main">
-                                  <label for="email" class="col-sm-6 control-label">邮箱</label>
-                                  <div class="col-sm-6">
-                                    <input type="email" class="form-control" id="email">
-                                  </div>
-                              </div>
-
-                              <br>
-
-                              <div class="form-group main">
-                                  <label for="company" class="col-sm-6 control-label">所属单位</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="company">
-                                  </div>
-                              </div>
-
-                              <br>
-
-                              <div class="form-group main">
-                                  <label for="address" class="col-sm-6 control-label">单位地址</label>
-                                  <div class="col-sm-6">
-                                    <input type="text" class="form-control" id="address">
-                                  </div>
-                              </div>
-                            </div>
-
-                            <br>
-
-                            <div class="main">
-                                  <button class="btn btn-info" type="submit">审核通过</button>
-                                  <button class="btn btn-primary" type="submit">审核退回</button>
-                            </div>
-
-                            </form>
                                 <!-- <table class="table table-striped table-bordered responsive">
                                     <thead>
                                         <tr>
@@ -448,6 +333,10 @@
                                     </tbody>
                                 </table> -->
                             </div>
+                            <div>
+                              <button style="text-align:right" class="btn btn-info" type="submit">一键导出</button>
+                            </div>
+
                         </div>
                     </div>
                     <!--/span--> </div>

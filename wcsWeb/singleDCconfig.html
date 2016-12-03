@@ -260,9 +260,14 @@
                         <div class="box-inner">
                             <div class="box-content">
 
-                                <div class="middle">
-                                    <div class="topologyDiv">
-                                        <img src="img\img.jpg" class="larger-image"></div>
+
+                                <div class="topologyDiv main">
+                                      <img src="img\img.jpg" class="larger-image">
+                                </div>
+
+                                <br>
+
+                                <div class="main">
                                     <button class="btn btn-primary" type="submit">绘制拓扑</button>
                                 </div>
 
@@ -273,72 +278,109 @@
                                             <p>单数据中心基本参数配置</p>
                                         </div>
 
-                                        <div class="form-group row">
+                                        <div>
+                                        <div class="form-group sameside">
+                                          <div class="row">
                                             <label for="heterogeneousa" class="col-xs-2 control-label">异构类型A</label>
-                                            <div class="col-sm-3"></div>
+                                          </div>
 
-                                            <label for="heterogeneousa" class="col-xs-2 control-label">异构类型B</label>
-                                            <div class="col-sm-3"></div>
-                                        </div>
+                                          <br>
 
-                                        <div class="form-group row">
+                                          <div class="row">
                                             <label for="unita" class="col-xs-2 control-label">处理单元数</label>
                                             <div class="col-sm-3">
-                                                <input type="text" class="form-control" id="unita"></div>
+                                                <input type="text" class="form-control" id="unita">
+                                            </div>
+                                          </div>
 
-                                            <label for="unitb" class="col-xs-2 control-label">处理单元数</label>
-                                            <div class="col-sm-3">
-                                                <input type="text" class="form-control" id="unitb"></div>
-                                        </div>
+                                          <br>
 
-                                        <div class="form-group row">
+                                          <div class="row">
                                             <label for="processora" class="col-xs-2 control-label">处理器</label>
                                             <div class="col-sm-3">
-                                                <select class="form-control">
-                                                    <option>请选择</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                </select>
+                                                    <select class="form-control">
+                                                        <option>请选择</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
                                             </div>
+                                          </div>
 
-                                            <label for="processorb" class="col-xs-2 control-label">处理器</label>
-                                            <div class="col-sm-3">
-                                                <select class="form-control">
-                                                    <option>请选择</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                          <br>
 
-                                        <div class="form-group row">
+                                          <div class="row">
                                             <label for="storagea" class="col-xs-2 control-label">存储</label>
                                             <div class="col-sm-3">
-                                                <input type="text" class="form-control" id="storagea"></div>
+                                            <input type="text" class="form-control" id="storagea">
+                                            </div>
+                                          </div>
 
-                                            <label for="storageb" class="col-xs-2 control-label">存储</label>
-                                            <div class="col-sm-3">
-                                                <input type="text" class="form-control" id="storageb"></div>
-                                        </div>
+                                          <br>
 
-                                        <div class="form-group row">
+                                          <div class="row">
                                             <label for="rama" class="col-xs-2 control-label">内存</label>
                                             <div class="col-sm-3">
-                                                <input type="text" class="form-control" id="rama"></div>
-
-                                            <label for="ramb" class="col-xs-2 control-label">内存</label>
-                                            <div class="col-sm-3">
-                                                <input type="text" class="form-control" id="ramb"></div>
+                                            <input type="text" class="form-control" id="rama">
+                                            </div>
                                         </div>
 
                                     </div>
-                                    <p class="pull-middle">
+
+                                    <div class="form-group sameside">
+                                      <div class="row">
+                                        <label for="heterogeneousa" class="col-xs-2 control-label">异构类型B</label>
+                                      </div>
+
+                                      <br>
+
+                                      <div class="row">
+                                        <label for="unita" class="col-xs-2 control-label">处理单元数</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control" id="unita">
+                                        </div>
+                                      </div>
+
+                                      <br>
+
+                                      <div class="row">
+                                        <label for="processora" class="col-xs-2 control-label">处理器</label>
+                                        <div class="col-sm-3">
+                                                <select class="form-control">
+                                                    <option>请选择</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                </select>
+                                        </div>
+                                      </div>
+
+                                      <br>
+
+                                      <div class="row">
+                                        <label for="storagea" class="col-xs-2 control-label">存储</label>
+                                        <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="storagea">
+                                        </div>
+                                      </div>
+
+                                      <br>
+
+                                      <div class="row">
+                                        <label for="rama" class="col-xs-2 control-label">内存</label>
+                                        <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="rama">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br clear="all" />
+                              </div>
+                                  <div class="middleb">
                                         <button class="btn btn-primary" type="submit">提交</button>
-                                    </p>
+                                  </div>
                                 </form>
                             </div>
                         </div>

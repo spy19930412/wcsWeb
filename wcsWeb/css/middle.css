@@ -1,14 +1,18 @@
+.sameside{
+  float:right;
+  width: 50%;
+}
+
+.main{
+  width:500px;
+  margin:0 auto;
+  align-items:center;
+}
+
 .label {
   vertical-align:text-middle;
 }
 
-.top {
-  padding-top: 10px;
-}
-
-.top_up {
-  padding-top: 20px;
-}
 
 .top_content {
   padding-top: 100px;
@@ -50,10 +54,6 @@
   background-color:#FFF8DC;
 }
 
-.middle_div {
-  padding-left: 300px;
-}
-
 .height_title {
   padding-bottom:10px;
 }
@@ -68,5 +68,9 @@
 
 .topologyDiv{
   margin-bottom: 20px;
+<<<<<<< HEAD
+}
+=======
   height: 400px;
 }
+>>>>>>> 1e033b4abe496db53a399949a038150c5bcad2f8

@@ -260,19 +260,23 @@
                                 <hr>
                                 <div>
                                     <form class="form-horizontal" action="index.html" method="post">
-                                        <div class="form-group row">
-                                            <label for="heterogeneousa" class="col-xs-2 control-label">任务设置类型</label>
-                                            <div class="col-sm-3">
-                                                <label class="radio-inline">
+                                        <div class="form-group row main">
+                                            <label for="heterogeneousa" class="col-sm-4 control-label">任务设置类型</label>
+                                            <div>
+                                                <label class="radio-inline col-sm-4">
                                                     <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked" >系统默认参数配置</label>
-                                                <label class="radio-inline">
+                                            </div>
+                                            <div>
+                                                <label class="radio-inline col-sm-4">
                                                     <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">自定义参数配置</label>
                                             </div>
                                         </div>
 
-                                        <div class="form-group row top_up">
-                                            <label for="number" class="col-xs-2 control-label">任务数量</label>
-                                            <div class="col-sm-3">
+                                        <br>
+
+                                        <div class="form-group row main">
+                                            <label for="number" class="col-sm-6 control-label">任务数量</label>
+                                            <div class="col-sm-6">
                                                 <select class="form-control" id="task-number" type="number" onclick="setDynamicTasks()">
                                                     <option value="choose-default" selected="selected">&nbsp;&nbsp;请选择</option>
                                                     <option>1</option>
@@ -356,16 +360,13 @@
                                         </div> -->
 
                                     </div>
-                                    <div class="row top_up" style="margin-top: 20px;">
-                                        <p class="col-sm-3 left_delete">
-                                            <button class="btn btn-primary" type="submit">上一步</button>
-                                        </p>
-                                        <p class="col-sm-3 left_create">
-                                            <button class="btn btn-primary" type="submit">下一步</button>
-                                        </p>
-                                        <p class="col-sm-3">
-                                            <button class="btn btn-primary" type="submit">添加到模板</button>
-                                        </p>
+
+                                    <br>
+
+                                    <div class="row main">
+                                            <button class="btn btn-primary col-sm-3" type="submit">上一步</button>
+                                            <button class="btn btn-primary col-sm-3" type="submit">下一步</button>
+                                            <button class="btn btn-primary col-sm-3" type="submit">添加到模板</button>
                                     </div>
                                 </form>
 
@@ -454,7 +455,7 @@
     <script src="js/jquery.history.js"></script>
     <!-- application script for Charisma demo -->
     <script src="js/charisma.js"></script>
-    <script>        
+    <script>
         function setDynamicTasks() {
             var dynamicTasksDiv = document.getElementById('dynamic-tasks');
             dynamicTasksDiv.innerHTML = '';
@@ -467,70 +468,70 @@
                /*  var taskDiv = document.createElement('DIV');
                 taskDiv.setAttribute('class', 'form-group'); */
                 var div1 = document.createElement('DIV');
-                div1.setAttribute('class', 'col-lg-6'); 
-                
+                div1.setAttribute('class', 'col-lg-6');
+
                 var label1 = document.createElement('LABEL');
                 label1.innerHTML = '任务'+(index+1).toString()+'种类';
-                
+
                 var select = document.createElement('SELECT');
                 select.setAttribute('class', 'form-control');
                 select.setAttribute('id','task'+(index+1).toString());
-                
+
                 var option = document.createElement('OPTION');
                 option.setAttribute('value', 'static');
                 option.setAttribute('selected', 'selected');
                 option.innerHTML = 'Default Task';
-                
+
                 var optionModel1=document.createElement('OPTION');
                 optionModel1.setAttribute('value','linear')
                 optionModel1.innerHTML='Dynamic Linear Task';
-                
+
                 var optionModel2=document.createElement('OPTION');
                 optionModel2.setAttribute('value','gauss')
                 optionModel2.innerHTML='Dynamic Gauss Task';
-                
+
                 select.appendChild(option);
                 select.appendChild(optionModel1);
                 select.appendChild(optionModel2);
-              
+
                 div1.appendChild(label1);
-                div1.appendChild(select);            
-                               
+                div1.appendChild(select);
+
                 var div2 = document.createElement('DIV');
                 div2.setAttribute('class', 'col-lg-6');
                 var label2 = document.createElement('LABEL');
                 label2.innerHTML = '任务'+(index+1).toString()+'子任务数';
-                
+
                 var select = document.createElement('SELECT');
                 select.setAttribute('class', 'form-control');
                 select.setAttribute('id','task_num'+(index+1).toString());
-                
+
                 var option = document.createElement('OPTION');
                 option.setAttribute('value', 'static');
                 option.setAttribute('selected', 'selected');
                 option.innerHTML = 'Select Task Num...';
-                
-                
+
+
                 var optionModel1=document.createElement('OPTION');
                 optionModel1.setAttribute('value','1');
                 optionModel1.innerHTML = 1;
-               
+
                 var optionModel2=document.createElement('OPTION');
                 optionModel2.setAttribute('value','2');
                 optionModel2.innerHTML = 2;
-                
+
                 var optionModel3=document.createElement('OPTION');
                 optionModel3.setAttribute('value','3');
                 optionModel3.innerHTML = 3;
-                
+
                 var optionModel4=document.createElement('OPTION');
                 optionModel4.setAttribute('value','4');
                 optionModel4.innerHTML = 4;
-                
+
                 var optionModel5=document.createElement('OPTION');
                 optionModel5.setAttribute('value','5');
-                optionModel5.innerHTML = 5; 
-                
+                optionModel5.innerHTML = 5;
+
                 div2.appendChild(label2);
                 div2.appendChild(select);
                 select.appendChild(option);
@@ -538,12 +539,12 @@
                 select.appendChild(optionModel2);
                 select.appendChild(optionModel3);
                 select.appendChild(optionModel4);
-                select.appendChild(optionModel5); 
-               
+                select.appendChild(optionModel5);
+
                 dynamicTasksDiv.appendChild(div1);
-                dynamicTasksDiv.appendChild(div2);               
-                
-            }  
+                dynamicTasksDiv.appendChild(div2);
+
+            }
         }
         function Task_configure_save(){
             var taskNums=$('#task-number').val();
@@ -574,7 +575,7 @@
                     alert("Save Task configure failure...");
                 }
             });
-            
+
         }
     </script></body>
 </html>
