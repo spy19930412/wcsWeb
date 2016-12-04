@@ -1,12 +1,13 @@
 .sameside{
   float:left;
-  width: 600px;
+  width: 40%;
+  margin-left: 5%;
 }
 .samesideP{
   padding: 20px;
 }
 .samesideS{
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 .main{
