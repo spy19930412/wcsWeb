@@ -1,12 +1,22 @@
 .sameside{
-  float:right;
-  width: 50%;
+  float:left;
+  width: 600px;
 }
-
+.samesideP{
+  padding: 20px;
+}
+.samesideS{
+  width: 1200px;
+  margin: 0 auto;
+}
 .main{
   width:500px;
   margin:0 auto;
   align-items:center;
+}
+.main2{
+  width: 700px;
+  margin: 0 auto;
 }
 
 .label {
