@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<!--
+    <!--
         ===
         This comment should NOT be removed.
 
@@ -15,718 +16,687 @@
         http://twitter.com/halalit_usman
         ===
     -->
-	<meta charset="utf-8">
-	<title>Welcome to the webcloudsim</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Muhammad Usman">
-
-	<!-- The styles -->
-	<link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
-
-	<link href="css/charisma-app.css" rel="stylesheet">
-	<link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
-	<link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
-	<link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
-	<link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
-	<link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
-	<link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
-	<link href='css/jquery.noty.css' rel='stylesheet'>
-	<link href='css/noty_theme_default.css' rel='stylesheet'>
-	<link href='css/elfinder.min.css' rel='stylesheet'>
-	<link href='css/elfinder.theme.css' rel='stylesheet'>
-	<link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
-	<link href='css/uploadify.css' rel='stylesheet'>
-	<link href='css/animate.min.css' rel='stylesheet'>
-	<link href='css/middle.css' rel='stylesheet'>
-	<!-- jQuery -->
-	<script src="bower_components/jquery/jquery.min.js"></script>
-
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <title>Welcome to the webcloudsim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Muhammad Usman">
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+    <link href='css/middle.css' rel='stylesheet'>
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
-	<!-- The fav icon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<style type="text/css">
-        html, body {
-            font: 11pt arial;
-        }
-
-        h1 {
-            font-size: 150%;
-            margin: 5px 0;
-        }
-
-        h2 {
-            font-size: 100%;
-            margin: 5px 0;
-        }
-
-        table.view {
-            width: 100%;
-        }
-
-        table td {
-            vertical-align: top;
-        }
-
-        table table {
-            background-color: #f5f5f5;
-            border: 1px solid #e5e5e5;
-        }
-
-        table table td {
-            vertical-align: middle;
-        }
-
-        input[type=text], pre {
-            border: 1px solid lightgray;
-        }
-
-        pre {
-            margin: 0;
-            padding: 5px;
-            font-size: 10pt;
-        }
-
-        #network {
-            width: 100%;
-            height: 400px;
-            border: 1px solid lightgray;
-        }
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <style type="text/css">
+    html,
+    body {
+        font: 11pt arial;
+    }
+    
+    h1 {
+        font-size: 150%;
+        margin: 5px 0;
+    }
+    
+    h2 {
+        font-size: 100%;
+        margin: 5px 0;
+    }
+    
+    table.view {
+        width: 100%;
+    }
+    
+    table td {
+        vertical-align: top;
+    }
+    
+    table table {
+        background-color: #f5f5f5;
+        border: 1px solid #e5e5e5;
+    }
+    
+    table table td {
+        vertical-align: middle;
+    }
+    
+    input[type=text],
+    pre {
+        border: 1px solid lightgray;
+    }
+    
+    pre {
+        margin: 0;
+        padding: 5px;
+        font-size: 10pt;
+    }
+    
+    #network {
+        width: 100%;
+        height: 400px;
+        border: 1px solid lightgray;
+    }
     </style>
+    <script type="text/javascript" src="js/vis.js"></script>
+    <link href="css/vis.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+    var nodes, edges, network;
+    var DIR = 'img/refresh-cl/';
 
-	<script type="text/javascript" src="js/vis.js"></script>
-	<link href="css/vis.css" rel="stylesheet" type="text/css"/>
+    // convenience method to stringify a JSON object
+    function toJSON(obj) {
+        return JSON.stringify(obj, null, 4);
+    }
 
-	<script type="text/javascript">
-        var nodes, edges, network;
-        var DIR = 'img/refresh-cl/';
-
-        // convenience method to stringify a JSON object
-        function toJSON(obj) {
-            return JSON.stringify(obj, null, 4);
+    function addNode() {
+        try {
+            nodes.add({
+                id: document.getElementById('node-id').value,
+                label: document.getElementById('node-label').value,
+                image: document.getElementById('node-image').value
+            });
+        } catch (err) {
+            alert(err);
         }
+    }
 
-        function addNode() {
-            try {
-                nodes.add({
-                    id: document.getElementById('node-id').value,
-                    label: document.getElementById('node-label').value,
-                    image: document.getElementById('node-image').value
-                });
-            }
-            catch (err) {
-                alert(err);
-            }
+    function updateNode() {
+        try {
+            nodes.update({
+                id: document.getElementById('node-id').value,
+                label: document.getElementById('node-label').value,
+                image: document.getElementById('node-image').value
+            });
+        } catch (err) {
+            alert(err);
         }
+    }
 
-        function updateNode() {
-            try {
-                nodes.update({
-                    id: document.getElementById('node-id').value,
-                    label: document.getElementById('node-label').value,
-                    image: document.getElementById('node-image').value
-                });
-            }
-            catch (err) {
-                alert(err);
-            }
+    function removeNode() {
+        try {
+            nodes.remove({
+                id: document.getElementById('node-id').value
+            });
+        } catch (err) {
+            alert(err);
         }
-        function removeNode() {
-            try {
-                nodes.remove({id: document.getElementById('node-id').value});
-            }
-            catch (err) {
-                alert(err);
-            }
-        }
+    }
 
-        function addEdge() {
-            try {
-                edges.add({
-                    id: document.getElementById('edge-id').value,
-                    from: document.getElementById('edge-from').value,
-                    to: document.getElementById('edge-to').value
-                });
-            }
-            catch (err) {
-                alert(err);
-            }
+    function addEdge() {
+        try {
+            edges.add({
+                id: document.getElementById('edge-id').value,
+                from: document.getElementById('edge-from').value,
+                to: document.getElementById('edge-to').value
+            });
+        } catch (err) {
+            alert(err);
         }
-        function updateEdge() {
-            try {
-                edges.update({
-                    id: document.getElementById('edge-id').value,
-                    from: document.getElementById('edge-from').value,
-                    to: document.getElementById('edge-to').value
-                });
-            }
-            catch (err) {
-                alert(err);
-            }
+    }
+
+    function updateEdge() {
+        try {
+            edges.update({
+                id: document.getElementById('edge-id').value,
+                from: document.getElementById('edge-from').value,
+                to: document.getElementById('edge-to').value
+            });
+        } catch (err) {
+            alert(err);
         }
-        function removeEdge() {
-            try {
-                edges.remove({id: document.getElementById('edge-id').value});
-            }
-            catch (err) {
-                alert(err);
-            }
+    }
+
+    function removeEdge() {
+        try {
+            edges.remove({
+                id: document.getElementById('edge-id').value
+            });
+        } catch (err) {
+            alert(err);
         }
+    }
 
-        function draw() {
-            // create an array with nodes
-            nodes = new vis.DataSet();
-            // nodes.on('*', function () {
-            //     document.getElementById('nodes').innerHTML = JSON.stringify(nodes.get(), null, 4);
-            // });
-            nodes.add([
-                {id: '1', label: '物理机1', color:'#97C2FC', image: DIR + 'Network-Pipe-icon.png', shape: 'image'},
-                {id: '2', label: '交换机1', color:'#FFFF00', image: DIR + 'Hardware-My-Computer-3-icon.png', shape: 'image'},
-                {id: '3', label: '异构节点1', color:'#FB7E81', image: DIR + 'Hardware-Printer-Blue-icon.png', shape: 'image'},
-                {id: '4', label: '异构节点2', color:'#7BE141',image: DIR + 'Hardware-Laptop-1-icon.png', shape: 'image'},
-                {id: '5', label: '物理机2', color:'#6E6EFD', image: DIR + 'Hardware-My-PDA-02-icon.png', shape: 'image'}
-            ]);
+    function draw() {
+        // create an array with nodes
+        nodes = new vis.DataSet();
+        // nodes.on('*', function () {
+        //     document.getElementById('nodes').innerHTML = JSON.stringify(nodes.get(), null, 4);
+        // });
+        nodes.add([{
+            id: '1',
+            label: '物理机1',
+            color: '#97C2FC',
+            image: DIR + 'Network-Pipe-icon.png',
+            shape: 'image'
+        }, {
+            id: '2',
+            label: '交换机1',
+            color: '#FFFF00',
+            image: DIR + 'Hardware-My-Computer-3-icon.png',
+            shape: 'image'
+        }, {
+            id: '3',
+            label: '异构节点1',
+            color: '#FB7E81',
+            image: DIR + 'Hardware-Printer-Blue-icon.png',
+            shape: 'image'
+        }, {
+            id: '4',
+            label: '异构节点2',
+            color: '#7BE141',
+            image: DIR + 'Hardware-Laptop-1-icon.png',
+            shape: 'image'
+        }, {
+            id: '5',
+            label: '物理机2',
+            color: '#6E6EFD',
+            image: DIR + 'Hardware-My-PDA-02-icon.png',
+            shape: 'image'
+        }]);
 
-            // create an array with edges
-            edges = new vis.DataSet();
-            // edges.on('*', function () {
-            //     document.getElementById('edges').innerHTML = JSON.stringify(edges.get(), null, 4);
-            // });
-            edges.add([
-                {id: '1', from: '1', to: '2'},
-                {id: '2', from: '1', to: '3'},
-                {id: '3', from: '2', to: '4'},
-                {id: '4', from: '2', to: '5'}
-            ]);
+        // create an array with edges
+        edges = new vis.DataSet();
+        // edges.on('*', function () {
+        //     document.getElementById('edges').innerHTML = JSON.stringify(edges.get(), null, 4);
+        // });
+        edges.add([{
+            id: '1',
+            from: '1',
+            to: '2'
+        }, {
+            id: '2',
+            from: '1',
+            to: '3'
+        }, {
+            id: '3',
+            from: '2',
+            to: '4'
+        }, {
+            id: '4',
+            from: '2',
+            to: '5'
+        }]);
 
-            // create a network
-            var container = document.getElementById('network');
-            var data = {
-                nodes: nodes,
-                edges: edges
-            };
-            var options = {
-                layout: {
-                    hierarchical: {
-                        direction: "UD"
-                    }
+        // create a network
+        var container = document.getElementById('network');
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+        var options = {
+            layout: {
+                hierarchical: {
+                    direction: "UD"
                 }
-            };
-            network = new vis.Network(container, data, options);
+            }
+        };
+        network = new vis.Network(container, data, options);
 
-            network.on("click", function (params) {
-        params.event = "[original event]";
-        document.getElementById('eventSpan').innerHTML = '<h2>Click event:</h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("doubleClick", function (params) {
-        params.event = "[original event]";
-        document.getElementById('eventSpan').innerHTML = '<h2>doubleClick event:</h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("oncontext", function (params) {
-        params.event = "[original event]";
-        document.getElementById('eventSpan').innerHTML = '<h2>oncontext (right click) event:</h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("dragStart", function (params) {
-        params.event = "[original event]";
-        document.getElementById('eventSpan').innerHTML = '<h2>dragStart event:</h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("dragging", function (params) {
-        params.event = "[original event]";
-        document.getElementById('eventSpan').innerHTML = '<h2>dragging event:</h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("dragEnd", function (params) {
-        params.event = "[original event]";
-        document.getElementById('eventSpan').innerHTML = '<h2>dragEnd event:</h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("zoom", function (params) {
-        document.getElementById('eventSpan').innerHTML = '<h2>zoom event:</h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("showPopup", function (params) {
-        document.getElementById('eventSpan').innerHTML = '<h2>showPopup event: </h2>' + JSON.stringify(params, null, 4);
-    });
-    network.on("hidePopup", function () {
-        console.log('hidePopup Event');
-    });
-    network.on("select", function (params) {
-        console.log('select Event:', params);
-    });
-    network.on("selectNode", function (params) {
-        console.log('selectNode Event:', params);
-    });
-    network.on("selectEdge", function (params) {
-        console.log('selectEdge Event:', params);
-    });
-    network.on("deselectNode", function (params) {
-        console.log('deselectNode Event:', params);
-    });
-    network.on("deselectEdge", function (params) {
-        console.log('deselectEdge Event:', params);
-    });
-    network.on("hoverNode", function (params) {
-        console.log('hoverNode Event:', params);
-    });
-    network.on("hoverEdge", function (params) {
-        console.log('hoverEdge Event:', params);
-    });
-    network.on("blurNode", function (params) {
-        console.log('blurNode Event:', params);
-    });
-    network.on("blurEdge", function (params) {
-        console.log('blurEdge Event:', params);
-    });
+        network.on("click", function(params) {
+            params.event = "[original event]";
+            document.getElementById('eventSpan').innerHTML = '<h2>Click event:</h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("doubleClick", function(params) {
+            params.event = "[original event]";
+            document.getElementById('eventSpan').innerHTML = '<h2>doubleClick event:</h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("oncontext", function(params) {
+            params.event = "[original event]";
+            document.getElementById('eventSpan').innerHTML = '<h2>oncontext (right click) event:</h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("dragStart", function(params) {
+            params.event = "[original event]";
+            document.getElementById('eventSpan').innerHTML = '<h2>dragStart event:</h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("dragging", function(params) {
+            params.event = "[original event]";
+            document.getElementById('eventSpan').innerHTML = '<h2>dragging event:</h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("dragEnd", function(params) {
+            params.event = "[original event]";
+            document.getElementById('eventSpan').innerHTML = '<h2>dragEnd event:</h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("zoom", function(params) {
+            document.getElementById('eventSpan').innerHTML = '<h2>zoom event:</h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("showPopup", function(params) {
+            document.getElementById('eventSpan').innerHTML = '<h2>showPopup event: </h2>' + JSON.stringify(params, null, 4);
+        });
+        network.on("hidePopup", function() {
+            console.log('hidePopup Event');
+        });
+        network.on("select", function(params) {
+            console.log('select Event:', params);
+        });
+        network.on("selectNode", function(params) {
+            console.log('selectNode Event:', params);
+        });
+        network.on("selectEdge", function(params) {
+            console.log('selectEdge Event:', params);
+        });
+        network.on("deselectNode", function(params) {
+            console.log('deselectNode Event:', params);
+        });
+        network.on("deselectEdge", function(params) {
+            console.log('deselectEdge Event:', params);
+        });
+        network.on("hoverNode", function(params) {
+            console.log('hoverNode Event:', params);
+        });
+        network.on("hoverEdge", function(params) {
+            console.log('hoverEdge Event:', params);
+        });
+        network.on("blurNode", function(params) {
+            console.log('blurNode Event:', params);
+        });
+        network.on("blurEdge", function(params) {
+            console.log('blurEdge Event:', params);
+        });
 
-        }
-
+    }
     </script>
-	<script src="js/googleAnalytics.js"></script>
+    <script src="js/googleAnalytics.js"></script>
 </head>
 
-<body  onload="draw();">
-	<!-- topbar starts -->
-	<div class="navbar navbar-default" role="navigation">
+<body onload="draw();">
+    <!-- topbar starts -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-inner">
+            <button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs" />
+                <span>webcloudsim</span>
+            </a>
+            <!-- user dropdown starts -->
+            <div class="btn-group pull-right">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i>
+                    <span class="hidden-sm hidden-xs">admin</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="login.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- user dropdown ends -->
+            <!-- theme selector starts -->
+            <div class="btn-group pull-right theme-container animated tada">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-tint"></i>
+                    <span class="hidden-sm hidden-xs">修改主题</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="themes">
+                    <li>
+                        <a data-value="classic" href="#">
+                            <i class="whitespace"></i> Classic
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="cerulean" href="#">
+                            <i class="whitespace"></i> Cerulean
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="cyborg" href="#">
+                            <i class="whitespace"></i> Cyborg
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="simplex" href="#">
+                            <i class="whitespace"></i> Simplex
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="darkly" href="#">
+                            <i class="whitespace"></i> Darkly
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="lumen" href="#">
+                            <i class="whitespace"></i> Lumen
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="slate" href="#">
+                            <i class="whitespace"></i> Slate
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="spacelab" href="#">
+                            <i class="whitespace"></i> Spacelab
+                        </a>
+                    </li>
+                    <li>
+                        <a data-value="united" href="#">
+                            <i class="whitespace"></i> United
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- theme selector ends -->
+            <ul class="collapse navbar-collapse nav navbar-nav top-menu">
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-globe"></i> 主页
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-th"></i> 新建仿真工程
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i> 绘制拓扑
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i> 仿真场景配置
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i> 算法配置
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i> 结果展示
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- topbar ends -->
+    <div class="ch-container">
+        <div class="row">
+            <!-- left menu starts -->
+            <div class="col-sm-2 col-lg-2">
+                <div class="sidebar-nav">
+                    <div class="nav-canvas">
+                        <div class="nav-sm nav nav-stacked"></div>
+                        <ul class="nav nav-pills nav-stacked main-menu">
+                            <li class="nav-header">菜单</li>
+                            <li class="accordion">
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>绘制拓扑</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--/span-->
+            <!-- left menu ends -->
+            <noscript>
+                <div class="alert alert-block col-md-12">
+                    <h4 class="alert-heading">Warning!</h4>
+                    <p>
+                        You need to have
+                        <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.
+                    </p>
+                </div>
+            </noscript>
+            <div id="content" class="col-lg-10 col-sm-10">
+                <!-- content starts -->
+                <div class="row">
+                    <div class="box col-md-12">
+                        <div class="box-inner">
+                            <div class="box-content">
+                                <hr>
+                                <div style="height:1400px">
+                                    <h1>请在下面的数据框内填写拓扑数据</h1>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <h2>拓扑图上的节点数据</h2>
+                                                <table>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <label for="node-id">Id</label>
+                                                        </td>
+                                                        <td>
+                                                            <input id="node-id" type="text" value="6">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <label for="node-label">Label</label>
+                                                        </td>
+                                                        <td>
+                                                            <input id="node-label" type="text" value="Node 6">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <label for="node-category">Category</label>
+                                                        </td>
+                                                        <td>
+                                                            <select id="node-category">
+                                                                <option value="1">物理机</option>
+                                                                <option value="2">交换机</option>
+                                                                <option value="3">数据中心</option>
+                                                                <option value="4">虚拟机</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 下拉列表控制隐藏区域从而设定节点图片 -->
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <label for="node-image">image</label>
+                                                        </td>
+                                                        <td>
+                                                            <input id="node-image" type="text" value="">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>Action</td>
+                                                        <td>
+                                                            <button id="node-add" onclick="addNode();">添加</button>
+                                                            <button id="node-update" onclick="updateNode();">修改</button>
+                                                            <button id="node-remove" onclick="removeNode();">删除</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <h2>拓扑图上的边的数据</h2>
+                                                <table>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <label for="edge-id">Id</label>
+                                                        </td>
+                                                        <td>
+                                                            <input id="edge-id" type="text" value="5">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <label for="edge-from">From</label>
+                                                        </td>
+                                                        <td>
+                                                            <input id="edge-from" type="text" value="3">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>
+                                                            <label for="edge-to">To</label>
+                                                        </td>
+                                                        <td>
+                                                            <input id="edge-to" type="text" value="4">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>Action</td>
+                                                        <td>
+                                                            <button id="edge-add" onclick="addEdge();">添加</button>
+                                                            <button id="edge-update" onclick="updateEdge();">修改</button>
+                                                            <button id="edge-remove" onclick="removeEdge();">删除</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <h1>数据显示</h1>
+                                    <table class="view">
+                                        <colgroup>
+                                            <col width="70%">
+                                            <col width="30%">
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <h2>拓扑图展示</h2>
+                                                <div id="network"></div>
+                                            </td>
+                                            <td>
+                                                <h2>节点携带参数</h2>
+                                                <pre id="eventSpan"></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div>
+                                    <button style="text-align:right" class="btn btn-info" type="submit">一键导出</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <!--/span-->
+                    <!-- content ends -->
+                </div>
+                <!--/#content.col-md-0-->
+            </div>
+            <!--/fluid-row-->
+            <hr>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h3>Settings</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>Here settings can be configured...</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                            <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="row">
+                <p class="col-md-9 col-sm-9 col-xs-12 copyright">
+                    &copy;
+                    <a href="http://usman.it" target="_blank">WebCloudSim2</a>
+                </p>
+                <p class="col-md-3 col-sm-3 col-xs-12 powered-by">
+                    copyright:
+                    <a href="http://usman.it/free-responsive-admin-template">BUPT</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+    <!--/.fluid-container-->
+    <!-- external javascript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- library for cookie management -->
+    <script src="js/jquery.cookie.js"></script>
+    <!-- calender plugin -->
+    <script src='bower_components/moment/min/moment.min.js'></script>
+    <script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+    <!-- data table plugin -->
+    <script src='js/jquery.dataTables.min.js'></script>
+    <!-- select or dropdown enhancer -->
+    <script src="bower_components/chosen/chosen.jquery.min.js"></script>
+    <!-- plugin for gallery image view -->
+    <script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+    <!-- notification plugin -->
+    <script src="js/jquery.noty.js"></script>
+    <!-- library for making tables responsive -->
+    <script src="bower_components/responsive-tables/responsive-tables.js"></script>
+    <!-- tour plugin -->
+    <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+    <!-- star rating plugin -->
+    <script src="js/jquery.raty.min.js"></script>
+    <!-- for iOS style toggle switch -->
+    <script src="js/jquery.iphone.toggle.js"></script>
+    <!-- autogrowing textarea plugin -->
+    <script src="js/jquery.autogrow-textarea.js"></script>
+    <!-- multiple file upload plugin -->
+    <script src="js/jquery.uploadify-3.1.min.js"></script>
+    <!-- history.js for cross-browser state change on ajax -->
+    <script src="js/jquery.history.js"></script>
+    <!-- application script for Charisma demo -->
+    <script src="js/charisma.js"></script>
+    <!-- 通过选择下拉列表的值定义节点类型 -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var selector = $("#node-category");
+        var imageValue = $("#node-image").val();
+        var DIR = 'img/refresh-cl/';
+        selector.change(function() {
+            if (this.value == '1') {
+                imageValue = DIR + 'Network-Pipe-icon.png';
+                //imageValue = '../img/refresh-cl/Hardware-My-Computer-3-icon.png';
+                $("#node-image").val(imageValue);
+            } else if (this.value == '2') {
+                imageValue = DIR + 'Hardware-My-Computer-3-icon.png';
+                $("#node-image").val(imageValue);
+            } else if (this.value == '3') {
+                imageValue = DIR + 'Hardware-Printer-Blue-icon.png';
+                $("#node-image").val(imageValue);
+            } else {
+                imageValue = DIR + 'Hardware-My-PDA-02-icon.png';
+                $("#node-image").val(imageValue);
+            }
+        })
 
-		<div class="navbar-inner">
-			<button type="button" class="navbar-toggle pull-left animated flip">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="index.html">
-				<img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
-				<span>webcloudsim</span>
-			</a>
-
-			<!-- user dropdown starts -->
-			<div class="btn-group pull-right">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i>
-					<span class="hidden-sm hidden-xs">admin</span>
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="#">Profile</a>
-					</li>
-					<li class="divider"></li>
-					<li>
-						<a href="login.html">Logout</a>
-					</li>
-				</ul>
-			</div>
-			<!-- user dropdown ends -->
-
-			<!-- theme selector starts -->
-			<div class="btn-group pull-right theme-container animated tada">
-				<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-tint"></i>
-					<span
-                        class="hidden-sm hidden-xs">修改主题</span>
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" id="themes">
-					<li>
-						<a data-value="classic" href="#">
-							<i class="whitespace"></i>
-							Classic
-						</a>
-					</li>
-					<li>
-						<a data-value="cerulean" href="#">
-							<i class="whitespace"></i>
-							Cerulean
-						</a>
-					</li>
-					<li>
-						<a data-value="cyborg" href="#">
-							<i class="whitespace"></i>
-							Cyborg
-						</a>
-					</li>
-					<li>
-						<a data-value="simplex" href="#">
-							<i class="whitespace"></i>
-							Simplex
-						</a>
-					</li>
-					<li>
-						<a data-value="darkly" href="#">
-							<i class="whitespace"></i>
-							Darkly
-						</a>
-					</li>
-					<li>
-						<a data-value="lumen" href="#">
-							<i class="whitespace"></i>
-							Lumen
-						</a>
-					</li>
-					<li>
-						<a data-value="slate" href="#">
-							<i class="whitespace"></i>
-							Slate
-						</a>
-					</li>
-					<li>
-						<a data-value="spacelab" href="#">
-							<i class="whitespace"></i>
-							Spacelab
-						</a>
-					</li>
-					<li>
-						<a data-value="united" href="#">
-							<i class="whitespace"></i>
-							United
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!-- theme selector ends -->
-
-			<ul class="collapse navbar-collapse nav navbar-nav top-menu">
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-globe"></i>
-						主页
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-th"></i>
-						新建仿真工程
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-edit"></i>
-						绘制拓扑
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-edit"></i>
-						仿真场景配置
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-edit"></i>
-						算法配置
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="glyphicon glyphicon-edit"></i>
-						结果展示
-					</a>
-				</li>
-			</ul>
-
-		</div>
-	</div>
-	<!-- topbar ends -->
-	<div class="ch-container">
-		<div class="row">
-
-			<!-- left menu starts -->
-			<div class="col-sm-2 col-lg-2">
-				<div class="sidebar-nav">
-					<div class="nav-canvas">
-						<div class="nav-sm nav nav-stacked"></div>
-						<ul class="nav nav-pills nav-stacked main-menu">
-							<li class="nav-header">菜单</li>
-							<li class="accordion active">
-								<a href="#">
-									<i class="glyphicon glyphicon-plus"></i>
-									<span>Excel表格输出</span>
-								</a>
-							</li>
-							<li class="accordion active">
-								<a href="#">
-									<i class="glyphicon glyphicon-plus"></i>
-									<span>仿真log日志记录</span>
-								</a>
-							</li>
-							<li class="accordion active">
-								<a href="#">
-									<i class="glyphicon glyphicon-plus"></i>
-									<span>图形化演示</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!--/span-->
-			<!-- left menu ends -->
-
-			<noscript>
-				<div class="alert alert-block col-md-12">
-					<h4 class="alert-heading">Warning!</h4>
-
-					<p>
-						You need to have
-						<a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
-						enabled to use this site.
-					</p>
-				</div>
-			</noscript>
-
-			<div id="content" class="col-lg-10 col-sm-10">
-				<!-- content starts -->
-				<div>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Excel表格输出</a>
-						</li>
-					</ul>
-				</div>
-
-				<!-- 保留 -->
-				<div class="row">
-					<div class="box col-md-12">
-						<div class="box-inner">
-							<div class="box-content">
-
-								<hr>
-								<div style="height:1400px" >
-									<h1>请在下面的数据框内填写基本数据</h1>
-									<table>
-										<tr>
-											<td>
-												<h2>Node</h2>
-												<table>
-													<tr>
-														<td></td>
-														<td>
-															<label for="node-id">Id</label>
-														</td>
-														<td>
-															<input id="node-id" type="text" value="6"></td>
-													</tr>
-													<tr>
-														<td></td>
-														<td>
-															<label for="node-label">Label</label>
-														</td>
-														<td>
-															<input id="node-label" type="text" value="Node 6"></td>
-													</tr>
-													<tr>
-
-														<td></td>
-														<td>
-															<label for="node-category">Category</label>
-														</td>
-														<td>
-															<select id="node-category">
-																<option value = "1">物理机</option>
-																<option value = "2">交换机</option>
-																<option value = "3">数据中心</option>
-																<option value = "4">虚拟机</option>
-															</select>
-														</td>
-													</tr>
-
-													<!-- 下拉列表控制隐藏区域从而设定节点图片 -->
-													<tr>
-														<td></td>
-														<td>
-															<label for="node-image">image</label>
-														</td>
-														<td>
-															<input id="node-image" type="text" value=""></td>
-													</tr>
-
-													<tr>
-														<td></td>
-														<td>Action</td>
-														<td>
-															<button id="node-add" onclick="addNode();">添加节点</button>
-															<button id="node-update" onclick="updateNode();">更新节点</button>
-															<button id="node-remove" onclick="removeNode();">删除节点</button>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td>
-												<h2>Edge</h2>
-												<table>
-													<tr>
-														<td></td>
-														<td>
-															<label for="edge-id">Id</label>
-														</td>
-														<td>
-															<input id="edge-id" type="text" value="5"></td>
-													</tr>
-													<tr>
-														<td></td>
-														<td>
-															<label for="edge-from">From</label>
-														</td>
-														<td>
-															<input id="edge-from" type="text" value="3"></td>
-													</tr>
-													<tr>
-														<td></td>
-														<td>
-															<label for="edge-to">To</label>
-														</td>
-														<td>
-															<input id="edge-to" type="text" value="4"></td>
-													</tr>
-													<tr>
-														<td></td>
-														<td>Action</td>
-														<td>
-															<button id="edge-add" onclick="addEdge();">Add</button>
-															<button id="edge-update" onclick="updateEdge();">Update</button>
-															<button id="edge-remove" onclick="removeEdge();">Remove</button>
-														</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-
-									</table>
-
-									<h1>可视化数据显示</h1>
-									<table class="view">
-										<colgroup>
-										<col width="70%">
-										<col width="30%"></colgroup>
-									<tr>
-										<td>
-											<h2>拓扑图展示</h2>
-											<div id="network"></div>
-										</td>
-										<td>
-											<h2>节点携带参数</h2>
-											<pre id="eventSpan"></pre>
-										</td>
-									</tr>
-								</table>
-
-							</div>
-							<div>
-								<button style="text-align:right" class="btn btn-info" type="submit">一键导出</button>
-							</div>
-
-						</div>
-					</div>
-					<!--/span-->
-				</div>
-				<!--/row-->
-
-				<!--/span-->
-
-				<!-- content ends -->
-			</div>
-			<!--/#content.col-md-0-->
-		</div>
-		<!--/fluid-row-->
-
-		<hr>
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-         aria-hidden="true">
-
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">×</button>
-						<h3>Settings</h3>
-					</div>
-					<div class="modal-body">
-						<p>Here settings can be configured...</p>
-					</div>
-					<div class="modal-footer">
-						<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
-						<a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<footer class="row">
-			<p class="col-md-9 col-sm-9 col-xs-12 copyright">
-				&copy;
-				<a href="http://usman.it" target="_blank">WebCloudSim2</a>
-
-			</p>
-
-			<p class="col-md-3 col-sm-3 col-xs-12 powered-by">
-				copyright:
-				<a
-                href="http://usman.it/free-responsive-admin-template">BUPT</a>
-			</p>
-		</footer>
-
-	</div>
-	<!--/.fluid-container-->
-
-	<!-- external javascript -->
-
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-	<!-- library for cookie management -->
-	<script src="js/jquery.cookie.js"></script>
-	<!-- calender plugin -->
-	<script src='bower_components/moment/min/moment.min.js'></script>
-	<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
-	<!-- data table plugin -->
-	<script src='js/jquery.dataTables.min.js'></script>
-
-	<!-- select or dropdown enhancer -->
-	<script src="bower_components/chosen/chosen.jquery.min.js"></script>
-	<!-- plugin for gallery image view -->
-	<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
-	<!-- notification plugin -->
-	<script src="js/jquery.noty.js"></script>
-	<!-- library for making tables responsive -->
-	<script src="bower_components/responsive-tables/responsive-tables.js"></script>
-	<!-- tour plugin -->
-	<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
-	<!-- star rating plugin -->
-	<script src="js/jquery.raty.min.js"></script>
-	<!-- for iOS style toggle switch -->
-	<script src="js/jquery.iphone.toggle.js"></script>
-	<!-- autogrowing textarea plugin -->
-	<script src="js/jquery.autogrow-textarea.js"></script>
-	<!-- multiple file upload plugin -->
-	<script src="js/jquery.uploadify-3.1.min.js"></script>
-	<!-- history.js for cross-browser state change on ajax -->
-	<script src="js/jquery.history.js"></script>
-	<!-- application script for Charisma demo -->
-	<script src="js/charisma.js"></script>
-	<!-- 通过选择下拉列表的值定义节点类型 -->
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript">
-$(function(){
-    var selector = $("#node-category");
-    var imageValue = $("#node-image").val();
-    var DIR = 'img/refresh-cl/';
-    selector.change(function(){
-       if(this.value == '1'){
-            imageValue = DIR + 'Network-Pipe-icon.png';
-            //imageValue = '../img/refresh-cl/Hardware-My-Computer-3-icon.png';
-            $("#node-image").val(imageValue);
-        }else if(this.value == '2'){
-            imageValue = DIR + 'Hardware-My-Computer-3-icon.png';
-            $("#node-image").val(imageValue);
-        }else if(this.value == '3'){
-            imageValue = DIR + 'Hardware-Printer-Blue-icon.png';
-            $("#node-image").val(imageValue);
-        }else{
-            imageValue = DIR + 'Hardware-My-PDA-02-icon.png';
-            $("#node-image").val(imageValue);
-        }
-    })
-
-});
-</script>
-
+    });
+    </script>
 </body>
+
 </html>
