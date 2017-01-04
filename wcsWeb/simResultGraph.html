@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--
         ===
@@ -19,10 +20,8 @@
     <title>Welcome to the webcloudsim</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Muhammad Usman">
-
     <!-- The styles -->
     <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
-
     <link href="css/charisma-app.css" rel="stylesheet">
     <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
     <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
@@ -40,19 +39,17 @@
     <link href='css/middle.css' rel='stylesheet'>
     <!-- jQuery -->
     <script src="bower_components/jquery/jquery.min.js"></script>
-
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <!-- The fav icon -->
-    <link rel="shortcut icon" href="img/favicon.ico"></head>
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
 
 <body>
     <!-- topbar starts -->
     <div class="navbar navbar-default" role="navigation">
-
         <div class="navbar-inner">
             <button type="button" class="navbar-toggle pull-left animated flip">
                 <span class="sr-only">Toggle navigation</span>
@@ -61,10 +58,9 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html">
-                <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
+                <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs" />
                 <span>webcloudsim</span>
             </a>
-
             <!-- user dropdown starts -->
             <div class="btn-group pull-right">
                 <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i>
@@ -82,118 +78,98 @@
                 </ul>
             </div>
             <!-- user dropdown ends -->
-
             <!-- theme selector starts -->
             <div class="btn-group pull-right theme-container animated tada">
                 <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-tint"></i>
-                    <span
-                        class="hidden-sm hidden-xs">修改主题</span>
+                    <span class="hidden-sm hidden-xs">修改主题</span>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" id="themes">
                     <li>
                         <a data-value="classic" href="#">
-                            <i class="whitespace"></i>
-                            Classic
+                            <i class="whitespace"></i> Classic
                         </a>
                     </li>
                     <li>
                         <a data-value="cerulean" href="#">
-                            <i class="whitespace"></i>
-                            Cerulean
+                            <i class="whitespace"></i> Cerulean
                         </a>
                     </li>
                     <li>
                         <a data-value="cyborg" href="#">
-                            <i class="whitespace"></i>
-                            Cyborg
+                            <i class="whitespace"></i> Cyborg
                         </a>
                     </li>
                     <li>
                         <a data-value="simplex" href="#">
-                            <i class="whitespace"></i>
-                            Simplex
+                            <i class="whitespace"></i> Simplex
                         </a>
                     </li>
                     <li>
                         <a data-value="darkly" href="#">
-                            <i class="whitespace"></i>
-                            Darkly
+                            <i class="whitespace"></i> Darkly
                         </a>
                     </li>
                     <li>
                         <a data-value="lumen" href="#">
-                            <i class="whitespace"></i>
-                            Lumen
+                            <i class="whitespace"></i> Lumen
                         </a>
                     </li>
                     <li>
                         <a data-value="slate" href="#">
-                            <i class="whitespace"></i>
-                            Slate
+                            <i class="whitespace"></i> Slate
                         </a>
                     </li>
                     <li>
                         <a data-value="spacelab" href="#">
-                            <i class="whitespace"></i>
-                            Spacelab
+                            <i class="whitespace"></i> Spacelab
                         </a>
                     </li>
                     <li>
                         <a data-value="united" href="#">
-                            <i class="whitespace"></i>
-                            United
+                            <i class="whitespace"></i> United
                         </a>
                     </li>
                 </ul>
             </div>
             <!-- theme selector ends -->
-
             <ul class="collapse navbar-collapse nav navbar-nav top-menu">
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-globe"></i>
-                        主页
+                        <i class="glyphicon glyphicon-globe"></i> 主页
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-th"></i>
-                        新建仿真工程
+                        <i class="glyphicon glyphicon-th"></i> 新建仿真工程
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-edit"></i>
-                        绘制拓扑
+                        <i class="glyphicon glyphicon-edit"></i> 绘制拓扑
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-edit"></i>
-                        仿真场景配置
+                        <i class="glyphicon glyphicon-edit"></i> 仿真场景配置
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-edit"></i>
-                        算法配置
+                        <i class="glyphicon glyphicon-edit"></i> 算法配置
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="glyphicon glyphicon-edit"></i>
-                        结果展示
+                        <i class="glyphicon glyphicon-edit"></i> 结果展示
                     </a>
                 </li>
             </ul>
-
         </div>
     </div>
     <!-- topbar ends -->
     <div class="ch-container">
         <div class="row">
-
             <!-- left menu starts -->
             <div class="col-sm-2 col-lg-2">
                 <div class="sidebar-nav">
@@ -216,19 +192,15 @@
             </div>
             <!--/span-->
             <!-- left menu ends -->
-
             <noscript>
                 <div class="alert alert-block col-md-12">
                     <h4 class="alert-heading">Warning!</h4>
-
                     <p>
                         You need to have
-                        <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
-                        enabled to use this site.
+                        <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.
                     </p>
                 </div>
             </noscript>
-
             <div id="content" class="col-lg-10 col-sm-10">
                 <!-- content starts -->
                 <div>
@@ -238,230 +210,416 @@
                         </li>
                     </ul>
                 </div>
-
                 <!-- 保留 -->
                 <div class="row">
                     <div class="box col-md-12">
                         <div class="box-inner">
                             <div class="box-content">
-                              <div class="alert alert-info">
-                                  <p>Qos对比结果输出</p>
-                              </div>
-
-                              <form class="form-horizontal" role="form">
-                                <div class="form-group">
-                                  <label for="outputobj" class="col-sm-2 control-label">选择输出对象</label>
-                                  <div class="col-sm-4">
-                                      <select class="form-control">
-                                          <option>请选择</option>
-                                          <option>全局</option>
-                                          <option>1</option>
-                                      </select>
-                                  </div>
-                                  <label for="outputtype" class="col-sm-2 control-label">选择输出类型</label>
-                                  <div class="col-sm-4">
-                                      <select class="form-control">
-                                          <option>请选择</option>
-                                          <option>全局</option>
-                                          <option>1</option>
-                                      </select>
-                                  </div>
+                                <div class="alert alert-info">
+                                    <p>Qos对比结果输出</p>
                                 </div>
-                                <div class="form-group">
-                                  <label for="compareobj" class="col-sm-2 control-label">对比对象</label>
-                                  <div class="col-sm-4">
-                                      <select class="form-control">
-                                          <option>请选择</option>
-                                          <option>全局</option>
-                                          <option>1</option>
-                                      </select>
-                                  </div>
-                                  <label for="outputform" class="col-sm-2 control-label">选择输出形式</label>
-                                  <div class="col-sm-4">
-                                      <select class="form-control">
-                                          <option>请选择</option>
-                                          <option>全局</option>
-                                          <option>1</option>
-                                      </select>
-                                  </div>
-                                </div>
-                              </form>
-
-                              <div class="topologyDiv main">
-                                  <img src="img\拓扑图.png" class="larger-image"></div>
-
-                              <div class="main" style="text-align:center;">
-                                  <button class="btn btn-primary" type="submit">下载图片</button>
-                              </div>
-
-                              <div class="alert alert-info">
-                                  <p>资源消耗对比</p>
-                              </div>
-
-                              <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                    <label for="outputobj" class="col-sm-2 control-label">选择输出对象</label>
-                                    <div class="col-sm-4">
-                                    <select class="form-control">
-                                      <option>请选择</option>
-                                      <option>全局</option>
-                                      <option>1</option>
-                                    </select>
-                                    </div>
-
-                                    <label for="outputtype" class="col-sm-2 control-label">选择输出形式</label>
-                                    <div class="col-sm-4">
-                                      <select class="form-control">
-                                        <option>请选择</option>
-                                        <option>全局</option>
-                                        <option>1</option>
-                                      </select>
-                                    </div>
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="outputobj" class="col-sm-2 control-label">选择输出对象</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>全局</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                        <label for="outputtype" class="col-sm-2 control-label">选择输出类型</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>全局</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                      <label for="compareobj" class="col-sm-2 control-label">对比对象</label>
-                                      <div class="col-sm-4">
-                                        <select class="form-control">
-                                          <option>请选择</option>
-                                          <option>全局</option>
-                                          <option>1</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-5"></div>
-                                      <button class="btn btn-primary" type="submit">一键生成</button>
+                                        <label for="compareobj" class="col-sm-2 control-label">对比对象</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>全局</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                        <label for="outputform" class="col-sm-2 control-label">选择输出形式</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>全局</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
                                     </div>
-
-                                  </form>
-
-                                  <br>
-
-                                    <div class="topologyDiv main">
-                                      <img src="img\拓扑图.png" class="larger-image"></div>
-
-                                    <div class="main" style="text-align:center;">
-                                        <button class="btn btn-primary" type="submit">下载图片</button>
-                                    </div>
-
-
-                              <div class="alert alert-info">
-                                  <p>时间对比结果输出</p>
-                              </div>
-
-                              <div class="form-group">
-                                  <div class="col-sm-4">
-                                      <label class="radio-inline">
-                                          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">整体损耗时间</label>
-                                      <label class="radio-inline">
-                                          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">平均损耗时间</label>
-                                  </div>
-                              </div>
-
-                              <div class="form-group">
-                                <label for="compareobj" class="col-sm-2 control-label">选择输出形式</label>
-                                <div class="col-sm-4">
-                                  <select class="form-control">
-                                    <option>请选择</option>
-                                    <option>条形图</option>
-                                    <option>1</option>
-                                  </select>
+                                </form>
+                                <div class="col-sm-5"></div>
+                                <button class="btn btn-primary" type="submit">一键生成</button>
+                                <!-- 输出结果1  -->
+                                <div id="graph1" style="width: 600px; height: 400px; margin: 20px auto;">
                                 </div>
+                                <!-- <div class="topologyDiv main">
+                                    <img src="img\拓扑图.png" class="larger-image"></div>
+                                <div class="main" style="text-align:center;">
+                                    <button class="btn btn-primary" type="submit">下载图片</button>
+                                </div> -->
+                                <div class="alert alert-info">
+                                    <p>资源消耗对比</p>
+                                </div>
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="outputobj" class="col-sm-2 control-label">选择输出对象</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>全局</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                        <label for="outputtype" class="col-sm-2 control-label">选择输出形式</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>全局</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="compareobj" class="col-sm-2 control-label">对比对象</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>全局</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="col-sm-5"></div>
+                                <button class="btn btn-primary" type="submit">一键生成</button>
+                                <!-- 输出结果2  -->
+                                <div id="graph2" style="width: 600px; height: 400px; margin: 20px auto;">
+                                </div>
+                                <br>
+                                <div class="alert alert-info">
+                                    <p>时间对比结果输出</p>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">整体损耗时间</label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">平均损耗时间</label>
+                                    </div>
+                                </div>
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="compareobj" class="col-sm-2 control-label">选择输出形式</label>
+                                        <div class="col-sm-4">
+                                            <select class="form-control">
+                                                <option>请选择</option>
+                                                <option>条形图</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
                                 <div class="col-sm-2"></div>
                                 <button class="btn btn-primary" type="submit">一键生成</button>
-                              </div>
-
-                              <div class="topologyDiv main">
-                                <img src="img\拓扑图.png" class="larger-image"></div>
-
-                              <div class="main" style="text-align:center;">
-                                  <button class="btn btn-primary" type="submit">下载图片</button>
-                              </div>
-
+                                <!-- 输出结果3  -->
+                                <div id="graph3" style="width: 600px; height: 400px; margin: 20px auto;">
+                                </div>
+                            </div>
                         </div>
+                        <!--/span-->
                     </div>
-                    <!--/span--> </div>
-                <!--/row-->
-
-                <!--/span-->
-
-                <!-- content ends --> </div>
-            <!--/#content.col-md-0--> </div>
-        <!--/fluid-row-->
-
-        <hr>
-
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-         aria-hidden="true">
-
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                        <h3>Settings</h3>
-                    </div>
-                    <div class="modal-body">
-                        <p>Here settings can be configured...</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
-                        <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                    <!--/row-->
+                    <!--/span-->
+                    <!-- content ends -->
+                </div>
+                <!--/#content.col-md-0-->
+            </div>
+            <!--/fluid-row-->
+            <hr>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                            <h3>Settings</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>Here settings can be configured...</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                            <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <footer class="row">
-            <p class="col-md-9 col-sm-9 col-xs-12 copyright">
-                &copy;
-                <a href="http://usman.it" target="_blank">
+            <footer class="row">
+                <p class="col-md-9 col-sm-9 col-xs-12 copyright">
+                    &copy;
+                    <a href="http://usman.it" target="_blank">
                  WebCloudSim2
                 </a>
+                </p>
+                <p class="col-md-3 col-sm-3 col-xs-12 powered-by">
+                    copyright:
+                    <a href="http://usman.it/free-responsive-admin-template">BUPT</a>
+                </p>
+            </footer>
+        </div>
+        <!--/.fluid-container-->
+        <!-- external javascript -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- library for cookie management -->
+        <script src="js/jquery.cookie.js"></script>
+        <!-- calender plugin -->
+        <script src='bower_components/moment/min/moment.min.js'></script>
+        <script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+        <!-- data table plugin -->
+        <script src='js/jquery.dataTables.min.js'></script>
+        <!-- select or dropdown enhancer -->
+        <script src="bower_components/chosen/chosen.jquery.min.js"></script>
+        <!-- plugin for gallery image view -->
+        <script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+        <!-- notification plugin -->
+        <script src="js/jquery.noty.js"></script>
+        <!-- library for making tables responsive -->
+        <script src="bower_components/responsive-tables/responsive-tables.js"></script>
+        <!-- tour plugin -->
+        <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+        <!-- star rating plugin -->
+        <script src="js/jquery.raty.min.js"></script>
+        <!-- for iOS style toggle switch -->
+        <script src="js/jquery.iphone.toggle.js"></script>
+        <!-- autogrowing textarea plugin -->
+        <script src="js/jquery.autogrow-textarea.js"></script>
+        <!-- multiple file upload plugin -->
+        <script src="js/jquery.uploadify-3.1.min.js"></script>
+        <!-- history.js for cross-browser state change on ajax -->
+        <script src="js/jquery.history.js"></script>
+        <!-- application script for Charisma demo -->
+        <script src="js/charisma.js"></script>
+        <!-- use echarts to show graphs -->
+        <script src="js/echarts.js"></script>
+        <script src="js/dark.js"></script>
+        <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        // 第二个参数可以指定前面引入的主题
+        var myChart1 = echarts.init(document.getElementById('graph1'), 'dark');
 
-            </p>
+        var myChart2 = echarts.init(document.getElementById('graph2'), 'dark');
 
-            <p class="col-md-3 col-sm-3 col-xs-12 powered-by">
-                copyright:
-                <a
-                href="http://usman.it/free-responsive-admin-template">BUPT</a>
-            </p>
-        </footer>
+        var myChart3 = echarts.init(document.getElementById('graph3'), 'dark');
 
-    </div>
-    <!--/.fluid-container-->
+        // 指定图表1的配置项和数据
+        var option1 = {
+            title: {
+                text: 'Qos对比结果输出'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                // data: ['算法1', '算法2', '算法3', '算法4', '算法5']
+                data: ['算法1', '算法2']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['50', '100', '150', '200', '250', '300', '350']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                // {
+                //     name: '算法1',
+                //     type: 'line',
+                //     stack: '总量',
+                //     data: [120, 132, 101, 134, 90, 230, 210]
+                // }, {
+                //     name: '算法2',
+                //     type: 'line',
+                //     stack: '总量',
+                //     data: [220, 182, 191, 234, 290, 330, 310]
+                // }, {
+                //     name: '算法3',
+                //     type: 'line',
+                //     stack: '总量',
+                //     data: [150, 232, 201, 154, 190, 330, 410]
+                // }, 
+                {
+                    name: '算法1',
+                    type: 'line',
+                    stack: '总量',
+                    smooth: true,
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                }, {
+                    name: '算法2',
+                    type: 'line',
+                    stack: '总量',
+                    smooth: true,
+                    data: [820, 932, 901, 934, 1290, 1330, 520]
+                }
+            ]
+        };
 
-    <!-- external javascript -->
+        var option2 = {
+            title: {
+                text: '资源消耗对比'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                // data: ['算法1', '算法2', '算法3', '算法4', '算法5']
+                data: ['算法1', '算法2']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['50', '100', '150', '200', '250', '300', '350']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                name: '算法1',
+                type: 'line',
+                stack: '总量',
+                smooth: true,
+                data: [320, 332, 301, 334, 390, 330, 320]
+            }, {
+                name: '算法2',
+                type: 'line',
+                stack: '总量',
+                smooth: true,
+                data: [820, 932, 901, 934, 1290, 1330, 520]
+            }]
+        };
 
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        var option3 = {
+            title: {
+                text: '资源消耗对比'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['算法1', '算法2']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {
+                        show: true
+                    },
+                    dataView: {
+                        show: true,
+                        readOnly: false
+                    },
+                    magicType: {
+                        show: true,
+                        type: ['line', 'bar']
+                    },
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            calculable: true,
+            xAxis: [{
+                type: 'category',
+                data: ['20', '50', '80', '100']
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                name: '算法1',
+                type: 'bar',
+                data: [2.0, 4.9, 7.0, 23.2],
+                markPoint: {
+                    data: [{
+                        type: 'max',
+                        name: '最大值'
+                    }, {
+                        type: 'min',
+                        name: '最小值'
+                    }]
+                },
+                markLine: {
+                    data: [{
+                        type: 'average',
+                        name: '平均值'
+                    }]
+                }
+            }, {
+                name: '算法2',
+                type: 'bar',
+                data: [2.6, 5.9, 9.0, 26.4],
+                markPoint: {
+                    data: [{
+                        name: '年最高',
+                        value: 182.2,
+                        xAxis: 7,
+                        yAxis: 183,
+                        symbolSize: 18
+                    }, {
+                        name: '年最低',
+                        value: 2.3,
+                        xAxis: 11,
+                        yAxis: 3
+                    }]
+                },
+                markLine: {
+                    data: [{
+                        type: 'average',
+                        name: '平均值'
+                    }]
+                }
+            }]
+        };
 
-    <!-- library for cookie management -->
-    <script src="js/jquery.cookie.js"></script>
-    <!-- calender plugin -->
-    <script src='bower_components/moment/min/moment.min.js'></script>
-    <script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
-    <!-- data table plugin -->
-    <script src='js/jquery.dataTables.min.js'></script>
 
-    <!-- select or dropdown enhancer -->
-    <script src="bower_components/chosen/chosen.jquery.min.js"></script>
-    <!-- plugin for gallery image view -->
-    <script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
-    <!-- notification plugin -->
-    <script src="js/jquery.noty.js"></script>
-    <!-- library for making tables responsive -->
-    <script src="bower_components/responsive-tables/responsive-tables.js"></script>
-    <!-- tour plugin -->
-    <script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
-    <!-- star rating plugin -->
-    <script src="js/jquery.raty.min.js"></script>
-    <!-- for iOS style toggle switch -->
-    <script src="js/jquery.iphone.toggle.js"></script>
-    <!-- autogrowing textarea plugin -->
-    <script src="js/jquery.autogrow-textarea.js"></script>
-    <!-- multiple file upload plugin -->
-    <script src="js/jquery.uploadify-3.1.min.js"></script>
-    <!-- history.js for cross-browser state change on ajax -->
-    <script src="js/jquery.history.js"></script>
-    <!-- application script for Charisma demo -->
-    <script src="js/charisma.js"></script>
-
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+        myChart2.setOption(option2);
+        myChart3.setOption(option3);
+        </script>
 </body>
+
 </html>
